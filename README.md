@@ -16,7 +16,8 @@ I use week2 mini project as template and make the following modification:
 ```
 #script
 polars
-matplotlib==3.7.2
+pyarrow
+tabulate
 ```
 ### 2. Read data
 
