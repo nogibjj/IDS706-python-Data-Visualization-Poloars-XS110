@@ -34,20 +34,20 @@ I analyse the 234 countries' population in 2022, growth rate and Area(km²).
 
 ### 1. Summary statistics using the describe method
 
-![Alt text](image1.png)
+![Alt text](/image/image1.png)
 
 ### 2. Mean, Median and Mode
 
-![Alt text](image2.png)
+![Alt text](/image/image2.png)
 
 ### 3. Variance and standard deviation
 
-![Alt text](image3.png)
+![Alt text](/image/image3.png)
 
 ### 4. histogram of 2022 population
 
-![Alt text](image4.png)
+![Alt text](/image/image4.png)
 
 ### 5. boxplot of 2022 population
 
-![Alt text](image5.png)
+![Alt text](/image/image5.png)
