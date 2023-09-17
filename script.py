@@ -1,4 +1,4 @@
-import pandas as pd
+import polars as pl
 import matplotlib.pyplot as plt
 
 def descript_stat(df):
@@ -18,10 +18,8 @@ def descript_stat(df):
     print("=== Mean, Median and Mode Overview ===")
     mean = df.mean()
     median = df.median()
-    mode = df.mode().iloc[0]  # In case there are multiple modes
     print("Mean:\n", mean)
     print("Median:\n", median)
-    print("Mode:\n", mode)
     print("\n")
 
     # Variance and standard deviation
@@ -32,37 +30,26 @@ def descript_stat(df):
     print("Standard Deviation:\n", std_deviation)
 
 
-    # #visualization
-        
-    # # Create a histogram
-    # plt.hist(df[['subscribers']], bins=20, color='blue', alpha=0.7)
 
-    # # Add labels and a title
-    # plt.xlabel('Value')
-    # plt.ylabel('Frequency')
-    # plt.title('Histogram of subscribers')
-
-    # # Display the histogram
-    # plt.show()
 
 def plot_histogram(df):
     """
     Plot a histogram 
 
     """
-    plt.hist(df[['subscribers']], bins=20, color='blue', alpha=0.7)
+    plt.hist(df[['2022 Population']], bins=20, color='blue', alpha=0.7)
     plt.xlabel('Value')
     plt.ylabel('Frequency')
-    plt.title('Histogram of subscribers')
+    plt.title('Histogram of 2022 Population')
     plt.show()
 
-GY_data = pd.read_csv('Global YouTube Statistics.csv', encoding="ISO-8859-1")
+WP_data = pl.read_csv('world_population.csv')
 
 
 
-#Top creators' subscriber counts, video views, upload frequency
+#country's population in 2022, growth rate and area.
 
-data = GY_data[['subscribers','video views','uploads']]
+data = WP_data[['2022 Population','Growth Rate','Area (km²)']]
 
 if __name__ == "__main__":
     descript_stat(data)

@@ -3,23 +3,23 @@ Test goes here
 
 """
 from script import descript_stat
-import pandas as pd
+import polars as pl
 import unittest
 
-GY_data = pd.read_csv('Global YouTube Statistics.csv', encoding="ISO-8859-1")
+WP_data = pl.read_csv('world_population.csv')
 
 
 
-#Top creators' subscriber counts, video views, upload frequency
+#country's population in 2022, growth rate and area.
 
-df = GY_data[['subscribers','video views','uploads']]
+data = WP_data[['2022 Population','Growth Rate','Area (km²)']]
 
 class TestDescriptiveStatistics(unittest.TestCase):
     def test_function_runs_without_errors(self):
         try:
             # Call your function here
             # Example: descript_stat(your_input_data)
-            descript_stat(df)
+            descript_stat(data)
         except Exception as e:
             self.fail(f"Function raised an exception: {e}")
 

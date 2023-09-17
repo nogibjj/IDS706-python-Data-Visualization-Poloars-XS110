@@ -1,17 +1,16 @@
 from script import descript_stat
 from script import plot_histogram
-import pandas as pd
+import polars as pl
 
-GY_data = pd.read_csv('Global YouTube Statistics.csv', encoding="ISO-8859-1")
+WP_data = pl.read_csv('world_population.csv')
 
 
 
-#Top creators' subscriber counts, video views, upload frequency
+#country's population in 2022, growth rate and area.
 
-df = GY_data[['subscribers','video views','uploads']]
-
+data = WP_data[['2022 Population','Growth Rate','Area (km²)']]
 
 if __name__ == "__main__":
     # pylint: disable=no-value-for-parameter
-    descript_stat(df)
-    plot_histogram(df)
+    descript_stat(data)
+    plot_histogram(data)
