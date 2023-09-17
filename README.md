@@ -1,34 +1,36 @@
 
-# Global YouTube Statistics 2023 
+# World Population
 
 ## Data
 
-The data is from kaggle [Global YouTube Statistics](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023). It has 28 columns with comprehensive details on top creators' subscriber counts, video views, upload frequency, country of origin, earnings, and more.
+The data is from kaggle [world population](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset). In this Dataset, we have Historical Population data for every Country/Territory in the world by different parameters like Area Size of the Country/Territory, Name of the Continent, Name of the Capital, Density, Population Growth Rate, Ranking based on Population, World Population Percentage, etc.
 
-I downloaded `Global YouTube Statistics.csv` from kaggle and uploaded it into this resporitory.
+I downloaded `word_population.csv` from kaggle and uploaded it into this resporitory.
 
 ## Setup
+
+I use week2 mini project as template and make the following modification: 
 
 ### 1. Update requirements.txt:
 ```
 #script
-pandas==2.0.3
+polars
 matplotlib==3.7.2
-
 ```
-### 2. Create a new python script `test_script.py`
+### 2. Read data
 
-### 3. Update Makefile
+Instead of using pd.read_csv, I use `pl.read_csv` to read `world_population.csv`
 
-```
-test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
-```
+### 3. Update script.py
+
+I update the script.py using Polars for descriptive statistics to generate summary statistics (mean, median, standard deviation)
+
+And I also create data visualization.
 
 ## Data Visualization
 
-I analyse the top creators' subscriber counts, video views, upload frequency, country of origin, earnings.
+I analyse the 234 countries' population in 2022, growth rate and Area(km²).
 
 ### 1. Summary statistics using the describe method
 
@@ -42,6 +44,10 @@ I analyse the top creators' subscriber counts, video views, upload frequency, co
 
 ![Alt text](image3.png)
 
-### 4. histogram of subscribers
+### 4. histogram of 2022 population
 
 ![Alt text](image4.png)
+
+### 5. boxplot of 2022 population
+
+![Alt text](image5.png)
