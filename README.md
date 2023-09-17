@@ -10,7 +10,7 @@ I downloaded `word_population.csv` from kaggle and uploaded it into this respori
 
 ## Setup
 
-I use week2 mini project as template and make the following modification: 
+I used week2 mini project as a template and made the following modifications: 
 
 ### 1. Update requirements.txt:
 ```
@@ -26,13 +26,13 @@ Instead of using pd.read_csv, I use `pl.read_csv` to read `world_population.csv`
 
 ### 3. Update script.py
 
-I update the script.py using Polars for descriptive statistics to generate summary statistics (mean, median, standard deviation)
+I updated the script.py using Polars for descriptive statistics to generate summary statistics (mean, median, standard deviation)
 
-And I also create data visualization.
+And I also created data visualization.
 
 ## Data Visualization
 
-I analyse the 234 countries' population in 2022, growth rate and Area(km²).
+I analysed the 234 countries' population in 2022, growth rate and Area(km²).
 
 ### 1. Summary statistics using the describe method
 
