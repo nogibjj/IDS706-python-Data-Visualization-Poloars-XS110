@@ -1,27 +1,22 @@
-"""
-Test goes here
-
-"""
-from script import descript_stat
+import main  # Import your main module
 import polars as pl
-import unittest
-
-WP_data = pl.read_csv('world_population.csv')
 
 
+def test_main():
+    """Test main.py"""
+    input_file_path = 'world_population.csv'  # Update with your dataset file path
+    summary_report = "report.md"
+    histogram_image = "image/population_histogram.png"
+    boxplot_image = "image/population_boxplot.png"
 
-#country's population in 2022, growth rate and area.
+    # Read the dataset using pandas
+    data = pl.read_csv(input_file_path)
 
-data = WP_data[['2022 Population','Growth Rate','Area (km²)']]
+    # Call the function from main.py with the DataFrame
+    main.save_report(
+        data, summary_report, histogram_image,boxplot_image
+    )
 
-class TestDescriptiveStatistics(unittest.TestCase):
-    def test_function_runs_without_errors(self):
-        try:
-            # Call your function here
-            # Example: descript_stat(your_input_data)
-            descript_stat(data)
-        except Exception as e:
-            self.fail(f"Function raised an exception: {e}")
 
-if __name__ == '__main__':
-    unittest.main()
+if __name__ == "__main__":
+    test_main()

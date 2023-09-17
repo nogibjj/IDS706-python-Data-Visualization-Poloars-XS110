@@ -1,6 +1,7 @@
 
 # World Population
 
+
 ## Data
 
 The data is from kaggle [world population](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset). In this Dataset, we have Historical Population data for every Country/Territory in the world by different parameters like Area Size of the Country/Territory, Name of the Continent, Name of the Capital, Density, Population Growth Rate, Ranking based on Population, World Population Percentage, etc.
@@ -46,8 +47,8 @@ I analyse the 234 countries' population in 2022, growth rate and Area(km²).
 
 ### 4. histogram of 2022 population
 
-![Alt text](/image/image4.png)
+![Alt text](/image/population_histogram.png)
 
 ### 5. boxplot of 2022 population
 
-![Alt text](/image/image5.png)
+![Alt text](/image/population_boxplot.png)
