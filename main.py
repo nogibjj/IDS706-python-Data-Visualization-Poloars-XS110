@@ -2,8 +2,7 @@ from script import descript_stat
 from script import save_report
 from script import readfile
 
-if __name__ == "__main__":
-    # Specify the input CSV file and output file paths
+def generate_report():
     input_file_path = 'world_population.csv'  # Update with your dataset file path
     summary_report = "report.md"
     histogram_image = "image/population_histogram.png"
@@ -16,3 +15,6 @@ if __name__ == "__main__":
 
     descript_stat(data)
     save_report(data, summary_report, histogram_image,boxplot_image)
+
+if __name__ == "__main__":
+    generate_report()
