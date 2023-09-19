@@ -30,6 +30,11 @@ I updated the script.py using Polars for descriptive statistics to generate summ
 
 And I also created data visualization.
 
+### 4. Generate report.md
+
+Use ` python main.py` in terminal, I generated `report.md` automatically.
+
+![Alt text](/image/image6.png)
 ## Data Visualization
 
 I analysed the 234 countries' population in 2022, growth rate and Area(km²).
