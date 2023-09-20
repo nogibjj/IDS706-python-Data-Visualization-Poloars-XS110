@@ -32,7 +32,7 @@ And I also created data visualization.
 
 ### 4. Generate report.md
 
-Use ` python main.py` in terminal, I generated `report.md` automatically.
+Run ` make all` in terminal, I generated `report.md` automatically.
 
 ![Alt text](/image/image6.png)
 ## Data Visualization
